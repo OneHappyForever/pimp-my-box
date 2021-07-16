@@ -15,7 +15,7 @@
 set -e
 source /usr/local/lib/pmb/common.sh
 
-MAX_REQUEST_GiB=99
+MAX_REQUEST_GiB=500
 RESERVED_GiB=10
 PROTECTED="xfer=+0 OR prio=3 OR is_ignored=y"
 
@@ -93,7 +93,7 @@ check_guard_file() {
 }
 
 download_free() {
-    bytes_free "/var/torrent/" # TODO: make this configurable
+    bytes_free "/APPBOX_DATA/apps/torrenting.wannaflix.net/torrents/" # TODO: make this configurable
 }
 
 items_loaded() {
